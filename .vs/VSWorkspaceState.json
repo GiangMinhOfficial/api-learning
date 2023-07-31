@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApiApp",
+    "\\WebApiApp\\WebApiApp",
+    "\\WebApiApp\\WebApiApp\\Controllers",
+    "\\WebApiApp\\WebApiApp\\Data",
+    "\\WebApiApp\\WebApiApp\\Helpers",
+    "\\WebApiApp\\WebApiApp\\Services"
+  ],
+  "SelectedNode": "\\WebApiApp\\WebApiApp\\Controllers\\HangHoaController.cs",
+  "PreviewInSolutionExplorer": false
+}
