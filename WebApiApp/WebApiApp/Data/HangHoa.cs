@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MyWebApiApp.Data;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiApp.Data
@@ -21,5 +22,11 @@ namespace WebApiApp.Data
 
         [ForeignKey("MaLoai")]
         public Loai Loai { get; set; }
+
+        public ICollection<DonHangChiTiet> DonHangChiTiets { set; get; }
+        public HangHoa()
+        {
+            DonHangChiTiets = new HashSet<DonHangChiTiet>();
+        }
     }
 }

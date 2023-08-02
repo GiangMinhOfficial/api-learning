@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using WebApiApp.Data;
+using WebApiApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,25 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn"));
+});
+
+builder.Services.AddScoped<ILoaiRepository, LoaiRepository>();
+
+var secretkey = builder.Configuration["AppSettings:SecretKey"];
+var secretKeyBytes = Encoding.UTF8.GetBytes(secretkey);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.TokenValidationParameters = new()
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(secretKeyBytes),
+
+        ClockSkew = TimeSpan.Zero
+    };
 });
 
 var app = builder.Build();

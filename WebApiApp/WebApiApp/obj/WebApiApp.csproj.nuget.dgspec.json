@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\API\\WebApiApp\\WebApiApp\\WebApiApp.csproj": {}
+    "D:\\Code\\API\\api-learning\\api-learning\\WebApiApp\\WebApiApp\\WebApiApp.csproj": {}
   },
   "projects": {
-    "D:\\Code\\API\\WebApiApp\\WebApiApp\\WebApiApp.csproj": {
+    "D:\\Code\\API\\api-learning\\api-learning\\WebApiApp\\WebApiApp\\WebApiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\API\\WebApiApp\\WebApiApp\\WebApiApp.csproj",
+        "projectUniqueName": "D:\\Code\\API\\api-learning\\api-learning\\WebApiApp\\WebApiApp\\WebApiApp.csproj",
         "projectName": "WebApiApp",
-        "projectPath": "D:\\Code\\API\\WebApiApp\\WebApiApp\\WebApiApp.csproj",
+        "projectPath": "D:\\Code\\API\\api-learning\\api-learning\\WebApiApp\\WebApiApp\\WebApiApp.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\API\\WebApiApp\\WebApiApp\\obj\\",
+        "outputPath": "D:\\Code\\API\\api-learning\\api-learning\\WebApiApp\\WebApiApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.20, )"
